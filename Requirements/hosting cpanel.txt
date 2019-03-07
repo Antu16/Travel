@@ -1,0 +1,4 @@
+cpanel: http://www.touristpeople.com.bd/cpanel
+UserName: touristpeoplecom
+Password: TouR#02%PeP07*!Bd
+IP : 202.4.96.47
