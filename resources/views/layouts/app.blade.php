@@ -13,55 +13,36 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('style')
-    <style>
-        li>a{
-            color: black;
-
-        }
-        .navbar-nav > li > a{
-            font-size: 30px;
-        }
-        li>a:hover{
-            color: darkred;
-
-        }
-        .nav > li > a:hover{
-            background-color: transparent;
-        }
-    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-light navbar-static-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-static-top" style="background-color: transparent!important;">
             <div class="container">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="images/Logo Final0_2.png" height="150" width="200" alt="">
+                        <img src="images/Logo Final0_2.png" style="height: 120px; width: 200px" alt="">
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                    <ul class="navbar-nav">
                         &nbsp;
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="navbar-nav my-2 ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}" >Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}" style="color:darkblue; font-size: 2em;">Login |</a></li>
+                            <li><a href="{{ route('register') }}" style="color:darkblue; font-size: 2em; margin-left: .5em">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
@@ -93,6 +74,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    @yield('script')
+@yield('script')
 </body>
 </html>
